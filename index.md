@@ -4,3 +4,13 @@
 
 layout: default
 ---
+
+# Welcome to my CV page!
+
+[About me](/about.md)
+
+[GitHub Projects](/projects.md)
+
+[Curriculum Vitae](/assets/)
+
+[My Free Time](travel.md)
