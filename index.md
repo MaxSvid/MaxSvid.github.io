@@ -7,10 +7,12 @@ layout: default
 
 # Welcome to my CV page!
 
-[About me](/about.md)
+[👉 About Me](/about.md)
 
-[GitHub Projects](/projects.md)
+[Main Project Details](/projects.md)
 
 [Curriculum Vitae](/assets/)
 
 [My Free Time](travel.md)
+
+[Check Out Stocki Bot for Information](https://t.me/StockiDeFi_bot)

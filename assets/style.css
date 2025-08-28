@@ -1,0 +1,24 @@
+.banner {
+  text-align: center;
+  padding: 20px;
+}
+
+.banner-image {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 600px) {
+  .banner-image {
+    width: 120px;
+    height: 120px;
+  }
+  .wrapper {
+    padding: 10px;
+  }
+}
+
+
