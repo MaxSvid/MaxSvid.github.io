@@ -1,0 +1,25 @@
+/* Smooth font rendering */
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Subtle link underline effect */
+a {
+  position: relative;
+}
+
+a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 1px;
+  background: currentColor;
+  transition: width 0.2s ease;
+}
+
+a:hover::after {
+  width: 100%;
+}

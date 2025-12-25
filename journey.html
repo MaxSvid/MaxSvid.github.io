@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Journey</title>
+  <link rel="icon" href="pictures/nft_1.jpg" type="image/x-icon" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            bg: "#0b0b0d",
+            text: "#e5e7eb",
+            muted: "#9ca3af",
+            accent: "#22c55e",
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-bg text-text font-sans">
+  <main class="max-w-2xl mx-auto px-6 py-16">
+
+    <!-- Header -->
+    <header class="mb-12 text-center">
+      <h1 class="text-lg font-medium tracking-tight text-text">My Journey</h1>
+    </header>
+
+    <!-- Banner Image -->
+    <div class="mb-12">
+      <img 
+        src="pictures/mini_me.jpg"
+        alt="My journey"
+        class="w-full h-56 sm:h-64 md:h-72 object-cover rounded-lg opacity-90 cursor-pointer"
+      />
+    </div>
+
+    <!-- Text Section -->
+    <section class="mb-12">
+      <p class="leading-relaxed text-muted">
+        I was born in Odesa, Ukraine, and from the age of six, my life revolved around 
+        the basketball court. Following in my father's footsteps, I realized early on that 
+        basketball isn't just about the game - it’s about learning how to perform and grow under pressure.
+      </p>
+
+      <p class="leading-relaxed text-muted mt-6">
+        At 14, I managed to get a scholarship in California to play there, before the 
+        COVID-19 eventually transferred me to Wichita, Kansas in 2020. It was there that I took 
+        my first programming class that completely changed how I approached problem-solving.
+      </p>
+
+      <div class="my-12">
+        <img 
+          src="pictures/lpa_1.jpg"
+          alt="LPA Senior Year 2023"
+          class="w-full h-56 sm:h-64 md:h-72 object-cover rounded-lg opacity-90 cursor-pointer"
+        />
+      </div>
+
+      <p class="leading-relaxed text-muted mt-6">
+        While working through Algebra homework, I began writing small Python scripts to automate 
+        the process, realizing that logic could save time. It wasn't about avoiding the effort, 
+        but about finding the most efficient path to a result—a mindset that eventually led me toward the world of Artificial Intelligence.
+      </p>
+
+      <p class="leading-relaxed text-muted mt-6">
+        Straight out of high school, I gained my first real-world experience as a Team Intern for <span class="italic">We Are D3</span>, 
+        a professional team competing in the $1 million TBT tournament. Seeing how workings 
+        of a pro team taught me that data is the "hidden glue" of sports; it’s the difference between a guess and a winning strategy.
+      </p>
+
+      <div class="my-12 flex flex-col sm:flex-row gap-6">
+        <img 
+          src="pictures/lpa_2.jpg"
+          alt="Graduation 2023"
+          class="w-full sm:basis-1/3 h-56 sm:h-64 object-cover object-top rounded-lg opacity-90 cursor-pointer"
+        />
+        <img 
+          src="pictures/tbt_1_23.jpg"
+          alt="TBT tournament 2023"
+          class="w-full sm:basis-2/3 h-56 sm:h-64 object-cover object-top rounded-lg opacity-90 cursor-pointer"
+        />
+      </div>
+
+      <p class="leading-relaxed text-muted mt-6">
+        While playing college basketball at Michigan during the 2023/2024 season, I began exploring DeFi because of the idea of ​​financial systems running as 
+        open-source code. I realized that both AI and DeFi are about the same thing: creating more
+        advanced systems that don't rely on old, slow intermediaries.
+      </p>
+
+      <p class="leading-relaxed text-muted mt-6">
+        After finishing my freshman year of college and studying computer programming, I returned to We Are D3 
+        in the summer of 2024. I traveled with the team to Dayton, Ohio, to witness the team's first tournament victory in six years.   
+        The summer in Connecticut and Ohio solidified my idea: whether it's a winning move or a defensive protocol, 
+        I wanted to study more about the science that drives a rapidly changing environment in real time.
+      </p>
+
+      <div class="my-12 grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <img 
+          src="pictures/tbt_3_24.jpg"
+          alt="Graduation 2023"
+          class="w-full h-72 sm:h-80 md:h-96 object-cover object-[50%_20%] rounded-lg opacity-90 cursor-pointer"
+        />
+        <img 
+          src="pictures/tbt_4_24.jpg"
+          alt="TBT tournament 2023"
+          class="w-full h-72 sm:h-80 md:h-96 object-cover rounded-lg opacity-90 cursor-pointer"
+        />
+      </div>
+
+      <!-- Spoiler Video -->
+      <p class="mt-6 text-sm text-muted">
+        →
+        <span id="showVideo" class="hover:text-text transition underline cursor-pointer">
+          Spoiler: Watch the first ever win emotions
+        </span>
+      </p>
+
+      <div id="videoContainer" class="mt-6 opacity-0 max-h-0 overflow-hidden transition-all duration-500">
+        <iframe 
+          id="youtubeVideo"
+          width="100%" 
+          height="360" 
+          src="" 
+          title="YouTube Video" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen
+          class="rounded-lg"
+        ></iframe>
+      </div>
+
+
+      <p class="leading-relaxed text-muted mt-6">
+      That's why I decided moved to Aberdeen to pursue a degree in data science at Robert Gordon University and to be closer to my family who live there.
+      I want to focus on building something truly important—using AI to solve complex problems and exploring the idea of ​​DeFi.
+    </p>
+
+    </section>
+
+    <!-- Navigation -->
+    <nav class="mt-10 flex justify-center gap-6 text-sm">
+      <a href="index.html" class="hover:text-accent transition">Home</a>
+    </nav>
+
+  </main>
+
+  <!-- Lightbox Overlay -->
+  <div id="lightbox" class="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center hidden z-50">
+    <button id="prevBtn" class="absolute left-4 text-white text-3xl font-bold">‹</button>
+    <img id="lightboxImage" class="max-w-full max-h-full rounded-lg shadow-lg opacity-0 transition-opacity duration-300"/>
+    <button id="nextBtn" class="absolute right-4 text-white text-3xl font-bold">›</button>
+    <button id="closeBtn" class="absolute top-4 right-4 text-white text-2xl font-bold">×</button>
+  </div>
+
+  <!-- JS -->
+  <script>
+    // Video toggle
+    const btn = document.getElementById("showVideo");
+    const container = document.getElementById("videoContainer");
+    const iframe = document.getElementById("youtubeVideo");
+
+    btn.addEventListener("click", () => {
+      if (container.classList.contains("opacity-0")) {
+        iframe.src = "https://www.youtube.com/embed/GIJl7OcECx8?rel=0&autoplay=1";
+        container.classList.remove("opacity-0", "max-h-0");
+        container.classList.add("opacity-100", "max-h-[1000px]");
+        container.scrollIntoView({ behavior: "smooth", block: "start" });
+      } else {
+        container.classList.remove("opacity-100", "max-h-[1000px]");
+        container.classList.add("opacity-0", "max-h-0");
+        setTimeout(() => { iframe.src = ""; }, 500);
+      }
+    });
+
+    // Lightbox functionality
+    const galleryItems = document.querySelectorAll('img');
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImage = document.getElementById("lightboxImage");
+    const closeBtn = document.getElementById("closeBtn");
+    const prevBtn = document.getElementById("prevBtn");
+    const nextBtn = document.getElementById("nextBtn");
+
+    let currentIndex = 0;
+
+    galleryItems.forEach((img, index) => {
+      img.addEventListener("click", () => {
+        currentIndex = index;
+        lightboxImage.src = img.src;
+        lightbox.classList.remove("hidden");
+        setTimeout(() => { lightboxImage.classList.remove("opacity-0"); }, 10);
+      });
+    });
+
+    closeBtn.addEventListener("click", () => {
+      lightboxImage.classList.add("opacity-0");
+      setTimeout(() => {
+        lightbox.classList.add("hidden");
+        lightboxImage.src = "";
+      }, 300);
+    });
+
+    prevBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      currentIndex = (currentIndex - 1 + galleryItems.length) % galleryItems.length;
+      lightboxImage.src = galleryItems[currentIndex].src;
+    });
+
+    nextBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      currentIndex = (currentIndex + 1) % galleryItems.length;
+      lightboxImage.src = galleryItems[currentIndex].src;
+    });
+
+    lightbox.addEventListener("click", (e) => {
+      if (e.target === lightbox) {
+        lightboxImage.classList.add("opacity-0");
+        setTimeout(() => {
+          lightbox.classList.add("hidden");
+          lightboxImage.src = "";
+        }, 300);
+      }
+    });
+  </script>
+
+</body>
+</html>

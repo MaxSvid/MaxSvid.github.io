@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Max Sviderskyi</title>
+    <!-- adding icon link -->
+    <link rel="icon" href="pictures/nft_1.jpg"
+        type="image/x-icon" />
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom Tailwind config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bg: "#0b0b0d",
+                        text: "#e5e7eb",
+                        muted: "#9ca3af",
+                        accent: "#22c55e",
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-bg text-text font-sans">
+    <main class="max-w-2xl mx-auto px-6 py-16">
+
+        <!-- Header -->
+        <header class="mb-12">
+            <h1 class="text-3xl font-semibold tracking-tight">
+                Max Sviderskyi
+            </h1>
+            <p class="mt-2 text-muted">
+                DeFi · Web3 · AI
+            </p>
+        </header>
+
+        <!-- About -->
+        <section class="mb-12">
+            <p class="leading-relaxed text-muted mb-4">
+                Hey, I’m Max, a second year Data Science student at Robert Gordon University in
+                Aberdeen, Scotland. I'm inspired by the intersection of DeFi and AI, and the idea that
+                'Information is the glue that holds networks together' - Yuval Harari's book, <span class="italic">Nexus.</span>
+            </p>
+
+            <p class="leading-relaxed text-muted">
+                <a href="journey.html" class="underline underline-offset-4 hover:text-accent transition">
+                    My journey</a> has taken me all over the world, giving me unique experiences that shape
+                how I see the world today. Along the way, I like to capturing those moments on phone. 
+            </p>
+        </section>
+
+        <!-- Links -->
+        <section class="mb-12">
+            <ul class="flex gap-4 text-sm">
+                <li>
+                    <a href="https://github.com/MaxSvid" target="_blank" rel="noopener"
+                        class="hover:text-accent transition">GitHub</a>
+                </li>
+                <li>
+                    <a href="https://t.me/mak_sjr" target="_blank" rel="noopener"
+                        class="hover:text-accent transition">Telegram</a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/max-sviderskyi-b28b01248/" target="_blank" rel="noopener"
+                        class="hover:text-accent transition">LinkedIn</a>
+                </li>
+                <li>
+                    <a href="blog.html" rel="noopener" class="hover:text-accent transition">Blog</a>
+                </li>
+                <li>
+                    <a href="cv/max_sviderskyi_cv.pdf" target="_blank" rel="noopener"
+                        class="hover:text-accent transition">CV</a>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Projects -->
+        <section class="mb-12">
+            <h2 class="text-lg font-medium mb-4">Projects
+                <span class="italic text-muted">(Under development, release soon)</span>
+            </h2>
+
+            <ul class="space-y-4 text-muted">
+                <li>
+                    <a href="#" class="hover:text-text transition">
+                        <span class="font-medium text-text">DeFi Mirror</span>
+                        -> An open-source platform for awesome decentralized finance projects.
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" class="hover:text-text transition">
+                        <span class="font-medium text-text">Mirror Bot</span>
+                        -> Helps manage the DeFi Mirror group on Telegram.
+                        <span class="italic">Discord coming soon.</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="hover:text-text transition">
+                        <span class="font-medium text-text">Stocki AI Agent</span>
+                        -> This agent can be used to analyze liquidity pools on DEX platforms.
+                    </a>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Footer -->
+        <div id="footer"></div>
+        <script>
+            fetch("footer.html")
+                .then(res => res.text())
+                .then(html => {
+                    document.getElementById("footer").innerHTML = html;
+                });
+        </script>
+
+    </main>
+</body>
+
+</html>

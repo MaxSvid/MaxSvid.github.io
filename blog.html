@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blog</title>
+  <!-- icon link -->
+  <link rel="icon" href="pictures/nft_1.jpg"
+   type="image/x-icon" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            bg: "#0b0b0d",
+            text: "#e5e7eb",
+            muted: "#9ca3af",
+            accent: "#22c55e",
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-bg text-text min-h-screen">
+
+  <main class="max-w-2xl mx-auto px-6 py-16">
+
+    <!-- Banner Image -->
+    <div class="mb-10">
+      <img 
+        src="pictures/nyc_1.jpg"
+        alt="My Travel Blog"
+        id="blogImage"
+        class="
+          w-full
+          h-48
+          sm:h-64
+          md:h-72
+          object-cover
+          rounded-lg
+          opacity-90
+          hover:opacity-100
+          transition
+          cursor-pointer
+        "
+      />
+    </div>
+
+    <!-- Blog Intro -->
+    <section class="space-y-6 text-muted leading-relaxed">
+      <p>
+    As you can see, I sometimes travel and take photos or videos as memories. 
+    I started this blog so I could save these photos somewhere :)
+      </p>
+    </section>
+
+    <!-- Journey Places -->
+    <section class="mt-10 space-y-6 text-muted leading-relaxed">
+      <p>New York City, USA</p>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <div class="text-center">
+          <img 
+            src="pictures/nyc_2.jpg"
+            alt="California 1"
+            class="journeyImage w-full h-48 sm:h-56 md:h-64 object-cover rounded-lg opacity-90 hover:opacity-100 transition cursor-pointer"/>
+        </div>
+
+        <div class="text-center">
+          <img 
+            src="pictures/nyc_3.jpg"
+            class="journeyImage w-full h-48 sm:h-56 md:h-64 object-cover rounded-lg opacity-90 hover:opacity-100 transition cursor-pointer"/>
+        </div>
+      </div>
+    </section>
+
+    
+    <!-- Journey Places -->
+    <section class="mt-10 space-y-6 text-muted leading-relaxed">
+      <p>Dublin, Ireland</p>
+
+    <!-- Journey Places -->
+    <section class="mt-10 space-y-6 text-muted leading-relaxed">
+      <p>Edinburgh, Scotland</p>
+
+    <!-- Journey Places -->
+    <section class="mt-10 space-y-6 text-muted leading-relaxed">
+      <p>Maine Summmer Trip 2024</p>
+
+    <!-- Journey Places -->
+    <section class="mt-10 space-y-6 text-muted leading-relaxed">
+      <p>Connecticut, USA</p>
+
+    <!-- Journey Places -->
+    <section class="mt-10 space-y-6 text-muted leading-relaxed">
+      <p>Inverness, Scotland</p>
+
+    <!-- Navigation -->
+    <nav class="mt-10 flex justify-center gap-6 text-sm">
+      <a href="index.html" class="hover:text-accent transition">Home</a>
+    </nav>
+
+  </main>
+
+  <!-- Lightbox Overlay -->
+  <div id="lightbox" class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center hidden z-50">
+    <img id="lightboxImage" class="max-w-full max-h-full rounded-lg shadow-lg" />
+  </div>
+
+  <!-- JS for Lightbox -->
+  <script>
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImage = document.getElementById("lightboxImage");
+
+    // Banner image
+    const blogImage = document.getElementById("blogImage");
+    blogImage.addEventListener("click", () => {
+      lightboxImage.src = blogImage.src;
+      lightbox.classList.remove("hidden");
+    });
+
+    // Journey images
+    const journeyImages = document.querySelectorAll(".journeyImage");
+    journeyImages.forEach(img => {
+      img.addEventListener("click", () => {
+        lightboxImage.src = img.src;
+        lightbox.classList.remove("hidden");
+      });
+    });
+
+    // Close lightbox when clicking outside image
+    lightbox.addEventListener("click", (e) => {
+      if (e.target !== lightboxImage) {
+        lightbox.classList.add("hidden");
+      }
+    });
+  </script>
+
+</body>
+</html>
