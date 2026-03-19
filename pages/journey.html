@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>My Journey</title>
-  <link rel="icon" href="pictures/nft_1.jpg" type="image/x-icon" />
+  <title>I am Max</title>
+  <link rel="icon" href="../pictures/nft_1.jpg" type="image/x-icon" />
 
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -22,7 +22,7 @@
     }
   </script>
 
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="../styles/styles.css">
 </head>
 
 <body class="bg-bg text-text font-sans">
@@ -30,13 +30,13 @@
 
     <!-- Header -->
     <header class="mb-12 text-center">
-      <h1 class="text-lg font-medium tracking-tight text-text">My Journey</h1>
+      <h1 class="text-lg font-medium tracking-tight text-text">I am Max</h1>
     </header>
 
     <!-- Banner Image -->
     <div class="mb-12">
-      <img 
-        src="pictures/mini_me.jpg"
+      <img
+        src="../pictures/mini_me.jpg"
         alt="My journey"
         class="w-full h-56 sm:h-64 md:h-72 object-cover rounded-lg opacity-90 cursor-pointer"
       />
@@ -45,125 +45,97 @@
     <!-- Text Section -->
     <section class="mb-12">
       <p class="leading-relaxed text-muted">
-        I was born in Odesa, Ukraine, growing up my life spun around the basketball court. 
-        Following in my father's footsteps, I developed a genuine love for this game.
-      </p>
-
-      <p class="leading-relaxed text-muted mt-6">
-        At 14, I managed to get a scholarship in California to play there, before the 
-        COVID-19 eventually transferred me to Wichita, Kansas in 2020. It was there that I took 
-        my first introduction to programming class.
+        I was born in Odesa, Ukraine, and grew up around basketball. At 14, I got a scholarship to play in California,
+        which eventually took me across the US - Kansas, Michigan, Ohio, Texas and 20+ other states where I spend nearly seven years chasing the game.
       </p>
 
       <div class="my-12">
-        <img 
-          src="pictures/lpa_1.jpg"
+        <img
+          src="../pictures/lpa_1.jpg"
           alt="LPA Senior Year 2023"
           class="w-full h-56 sm:h-64 md:h-72 object-cover rounded-lg opacity-90 cursor-pointer"
         />
       </div>
 
       <p class="leading-relaxed text-muted mt-6">
-        While taking this class, I began using small python scripts to help myself with basic algebra homework.
-        This helped me to save some free time on it and keep up with intensee basketball season and 2 trainings per day. 
-        Seeing and learning how computer could handle several tasks more efficiently it sparked my interest in exploring how technology
-        and later machine learning and AI can help people work faster or study better.
-      </p>
-
-      <p class="leading-relaxed text-muted mt-6">
-        After graduation in 2023, I gained my first real-world experience as a team intern for <span class="italic">We Are D3</span>, 
-        a professional basketball team competing in the $1 million TBT tournament. 
-      </p>
-
-      <p class="leading-relaxed text-muted mt-6">
-        Seeing how things run behind the scenes allowed me to gain experience in team management and further explore more how data is used
-        everywhere in sports by being the "secret" behind the strategy, similar to what is shown in the Moneyball (2011) movie with Brad Pitt and Johan Hill.
+        After graduating in 2023, I interned for <span class="italic">We Are D3</span>, a professional basketball team
+        competing in the $1 million TBT tournament. I began there as intern who helped with every tasks I was given but also seeing how data quietly drives decisions behind the scenes —
+        strategy, scouting, performance — got me genuinely curious about that side of things.
       </p>
 
       <div class="my-12 flex flex-col sm:flex-row gap-6">
-        <img 
-          src="pictures/lpa_2.jpg"
+        <img
+          src="../pictures/lpa_2.jpg"
           alt="Graduation 2023"
           class="w-full sm:basis-1/3 h-56 sm:h-64 object-cover object-top rounded-lg opacity-90 cursor-pointer"
         />
-        <img 
-          src="pictures/tbt_1_23.jpg"
+        <img
+          src="../pictures/tbt_1_23.jpg"
           alt="TBT tournament 2023"
           class="w-full sm:basis-2/3 h-56 sm:h-64 object-cover object-top rounded-lg opacity-90 cursor-pointer"
         />
       </div>
 
       <p class="leading-relaxed text-muted mt-6">
-      After that summer, I went to play college basketball at GCC in Michigan for NJCAA Region 13 during the 2023/24 season. 
-      I then chose to study Computer Programming in Applied Business to dive deeper into the areas that interested me. 
+      That fall I went to play college basketball at GCC in Michigan, where I also wrote my first lines of code.
+      Studying Computer Programming alongside basketball, I got my first taste of IT support and started getting serious about tech.
       </p>
 
       <p class="leading-relaxed text-muted mt-6">
-      While that year wasn’t the best for basketball, it was definitely a great year for exploring pick of AI and even getting my first introduction to an IT Support role.
-      </p>
-
-      <p class="leading-relaxed text-muted mt-6">
-      After finishing my freshman year of college and completing my full time role, I returned to We Are D3 in the summer of 2024. 
-      I traveled with the team to Dayton, Ohio, to witness the team's first tournament win in six years.   
+      In the summer of 2024 I rejoined We Are D3 and traveled with the team to Dayton, Ohio,
+      where I watched them win their first tournament in six years.
       </p>
 
             <!-- Spoiler Video -->
       <p class="mt-6 text-sm text-muted">
         →
         <span id="showVideo" class="hover:text-text transition underline cursor-pointer">
-          Spoiler: Watch the first ever win emotions
+          Spoiler: Watch the first ever win reaction
         </span>
       </p>
 
       <div id="videoContainer" class="mt-6 opacity-0 max-h-0 overflow-hidden transition-all duration-500">
-        <iframe 
+        <iframe
           id="youtubeVideo"
-          width="100%" 
-          height="360" 
-          src="" 
-          title="YouTube Video" 
-          frameborder="0" 
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          width="100%"
+          height="360"
+          src=""
+          title="YouTube Video"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen
           class="rounded-lg"
         ></iframe>
       </div>
 
       <p class="leading-relaxed text-muted mt-6">
-      A summer in Ohio that year, along with living and traveling around New England with my family, made me 
-      realize that I wanted to learn more about the science behind the rapidly changing world of AI 
-      and data-driven decisions - the kind that can help people win or improve outcomes.
+      That summer — between Ohio and traveling around New England — made it clear what I wanted to do next.
+      I decided to leave basketball behind and focus on data and AI full time.
       </p>
 
       <div class="my-12 grid grid-cols-1 sm:grid-cols-2 gap-6">
-        <img 
-          src="pictures/tbt_3_24.jpg"
+        <img
+          src="../pictures/tbt_3_24.jpg"
           alt="Graduation 2023"
           class="w-full h-72 sm:h-80 md:h-96 object-cover object-[50%_20%] rounded-lg opacity-90 cursor-pointer"
         />
-        <img 
-          src="pictures/tbt_4_24.jpg"
+        <img
+          src="../pictures/tbt_4_24.jpg"
           alt="TBT tournament 2023"
           class="w-full h-72 sm:h-80 md:h-96 object-cover rounded-lg opacity-90 cursor-pointer"
         />
       </div>
 
       <p class="leading-relaxed text-muted mt-6">
-      That’s why I made the hard decision to end my basketball career in the states, where I had spent nearly seven years of my life, 
-      and focus on my new goal. I moved to Aberdeen to pursue a degree in Data Science with Business Management at Robert Gordon University.
-    </p>
-
-      <p class="leading-relaxed text-muted mt-6">
-      And yeah, I still play and enjoy basketball in my free time here in Scotland, but I’m also exploring an idea 
-      I’ve had since my sophomore year of high school - that AI can be good for people, as long as 
-      we make the right decisions in how we want to use it to improve things around us.    
+      I moved to Aberdeen, Scotland to study Data Science with Business Management at Robert Gordon University.
+      Still play basketball here, but the focus now is on how AI and data can actually help people make better decisions.
     </p>
 
     </section>
 
     <!-- Navigation -->
     <nav class="mt-10 flex justify-center gap-6 text-sm">
-      <a href="index.html" class="hover:text-accent transition">Home</a>
+      <a href="../index.html" class="hover:text-accent transition">Home</a>
     </nav>
 
   </main>

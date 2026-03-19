@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog</title>
+  <link rel="icon" href="../pictures/nft_1.jpg" type="image/x-icon" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            bg: "#0b0b0d",
+            text: "#e5e7eb",
+            muted: "#9ca3af",
+            accent: "#22c55e",
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="stylesheet" href="../styles/styles.css">
+</head>
+
+<body class="bg-bg text-text min-h-screen">
+
+  <main class="max-w-2xl mx-auto px-6 py-16">
+
+    <!-- Header -->
+    <header class="mb-10">
+      <h1 class="text-lg font-medium tracking-tight">Blog</h1>
+      <p class="text-sm text-muted mt-1">Places I've been, things I've seen.</p>
+    </header>
+
+    <!-- NYC -->
+    <section class="mb-16">
+      <p class="text-xs text-muted uppercase tracking-widest mb-4">New York City, USA</p>
+
+      <!-- Full width -->
+      <div class="mb-3">
+        <img src="../pictures/nyc_1.jpg" alt="NYC"
+          class="gallery-img w-full h-64 sm:h-80 object-cover rounded-lg opacity-90 hover:opacity-100 transition cursor-pointer" />
+      </div>
+
+      <!-- 2-col -->
+      <div class="grid grid-cols-2 gap-3 mb-3">
+        <img src="../pictures/nyc_2.jpg" alt="NYC"
+          class="gallery-img w-full h-48 sm:h-56 object-cover rounded-lg opacity-90 hover:opacity-100 transition cursor-pointer" />
+        <img src="../pictures/nyc_3.jpg" alt="NYC"
+          class="gallery-img w-full h-48 sm:h-56 object-cover rounded-lg opacity-90 hover:opacity-100 transition cursor-pointer" />
+      </div>
+
+      <!-- 3-col -->
+      <div class="grid grid-cols-3 gap-3 mb-3">
+        <img src="../pictures/nyc_4.jpg" alt="NYC"
+          class="gallery-img w-full h-36 sm:h-44 object-cover rounded-lg opacity-90 hover:opacity-100 transition cursor-pointer" />
+        <img src="../pictures/nyc_5.jpg" alt="NYC"
+          class="gallery-img w-full h-36 sm:h-44 object-cover rounded-lg opacity-90 hover:opacity-100 transition cursor-pointer" />
+        <img src="../pictures/nyc_6.jpg" alt="NYC"
+          class="gallery-img w-full h-36 sm:h-44 object-cover rounded-lg opacity-90 hover:opacity-100 transition cursor-pointer" />
+      </div>
+
+      <!-- 2-col -->
+      <div class="grid grid-cols-2 gap-3 mb-3">
+        <img src="../pictures/nyc_7.jpg" alt="NYC"
+          class="gallery-img w-full h-48 sm:h-56 object-cover rounded-lg opacity-90 hover:opacity-100 transition cursor-pointer" />
+        <img src="../pictures/nyc_8.jpg" alt="NYC"
+          class="gallery-img w-full h-48 sm:h-56 object-cover rounded-lg opacity-90 hover:opacity-100 transition cursor-pointer" />
+      </div>
+
+      <!-- 2-col -->
+      <div class="grid grid-cols-2 gap-3">
+        <img src="../pictures/nyc_9.jpg" alt="NYC"
+          class="gallery-img w-full h-48 sm:h-56 object-cover rounded-lg opacity-90 hover:opacity-100 transition cursor-pointer" />
+        <img src="../pictures/nyc_10.jpg" alt="NYC"
+          class="gallery-img w-full h-48 sm:h-56 object-cover rounded-lg opacity-90 hover:opacity-100 transition cursor-pointer" />
+      </div>
+    </section>
+
+    <!-- Connecticut -->
+    <section class="mb-16">
+      <p class="text-xs text-muted uppercase tracking-widest mb-4">Connecticut, USA</p>
+      <img src="../pictures/ct_1.jpg" alt="Connecticut"
+        class="gallery-img w-full h-64 sm:h-80 object-cover rounded-lg opacity-90 hover:opacity-100 transition cursor-pointer" />
+    </section>
+
+    <!-- Coming soon -->
+    <section class="mb-16">
+      <p class="text-xs text-muted uppercase tracking-widest mb-4">More coming</p>
+      <ul class="text-sm text-muted space-y-1">
+        <li>Dublin, Ireland</li>
+        <li>Edinburgh, Scotland</li>
+        <li>Maine, USA — Summer 2024</li>
+        <li>Inverness, Scotland</li>
+        <li>Gdansk, Poland</li>
+      </ul>
+    </section>
+
+    <!-- Nav -->
+    <nav class="flex justify-center text-sm">
+      <a href="../index.html" class="hover:text-accent transition">Home</a>
+    </nav>
+
+  </main>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center hidden z-50">
+    <button id="prevBtn" class="absolute left-4 text-white text-3xl font-bold px-2 py-4">‹</button>
+    <img id="lightboxImage" class="max-w-full max-h-full rounded-lg shadow-lg opacity-0 transition-opacity duration-300" />
+    <button id="nextBtn" class="absolute right-4 text-white text-3xl font-bold px-2 py-4">›</button>
+    <button id="closeBtn" class="absolute top-4 right-4 text-white text-2xl font-bold">×</button>
+  </div>
+
+  <script>
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImage = document.getElementById("lightboxImage");
+    const closeBtn = document.getElementById("closeBtn");
+    const prevBtn = document.getElementById("prevBtn");
+    const nextBtn = document.getElementById("nextBtn");
+
+    const galleryImgs = Array.from(document.querySelectorAll(".gallery-img"));
+    let currentIndex = 0;
+
+    function showLightbox(index) {
+      currentIndex = index;
+      lightboxImage.classList.add("opacity-0");
+      lightbox.classList.remove("hidden");
+      lightboxImage.src = galleryImgs[currentIndex].src;
+      setTimeout(() => lightboxImage.classList.remove("opacity-0"), 10);
+    }
+
+    function closeLightbox() {
+      lightboxImage.classList.add("opacity-0");
+      setTimeout(() => {
+        lightbox.classList.add("hidden");
+        lightboxImage.src = "";
+      }, 300);
+    }
+
+    galleryImgs.forEach((img, i) => {
+      img.addEventListener("click", () => showLightbox(i));
+    });
+
+    closeBtn.addEventListener("click", closeLightbox);
+    lightbox.addEventListener("click", (e) => { if (e.target === lightbox) closeLightbox(); });
+
+    prevBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      showLightbox((currentIndex - 1 + galleryImgs.length) % galleryImgs.length);
+    });
+
+    nextBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      showLightbox((currentIndex + 1) % galleryImgs.length);
+    });
+
+    document.addEventListener("keydown", (e) => {
+      if (lightbox.classList.contains("hidden")) return;
+      if (e.key === "ArrowLeft") prevBtn.click();
+      if (e.key === "ArrowRight") nextBtn.click();
+      if (e.key === "Escape") closeLightbox();
+    });
+  </script>
+
+</body>
+
+</html>

@@ -28,7 +28,7 @@
         }
     </script>
 
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
 
 <body class="bg-bg text-text font-sans">
@@ -47,19 +47,12 @@
         <!-- About -->
         <section class="mb-12">
             <p class="leading-relaxed text-muted mb-4">
-              Hey, I’m Max, a second year Data Science student at Robert Gordon University in
-              Aberdeen, Scotland. I'm interested in AI, Tech Support and development.
+                Hey, <a href="pages/journey.html" class="underline underline-offset-4 hover:text-accent transition">
+                my name is Max, </a> and I'm a second-year Data Science student at Robert Gordon University in
+                Aberdeen, Scotland. I'm interested in AI, Tech Support and development.
             </p>
-      <section class="mb-12">
-            <p class="leading-relaxed text-muted mb-4">
-            I'm inspired by the idea that “Information is the glue that holds networks together” - from Yuval Harari's book, <span class="italic">Nexus</span>.
-            <p>
-            <p class="leading-relaxed text-muted">
-                <a href="journey.html" class="underline underline-offset-4 hover:text-accent transition">
-                My journey</a> has taken me all over the world, giving me unique experiences and perspectives on how I see the world today due to my previous basketball career.
-            </p>
-        </section>
-
+            <section class="mb-12">
+  
         <!-- Links -->
         <section class="mb-12">
             <ul class="flex gap-4 text-sm">
@@ -76,7 +69,7 @@
                         class="hover:text-accent transition">LinkedIn</a>
                 </li>
                 <li>
-                    <a href="blog.html" rel="noopener" class="hover:text-accent transition">Blog</a>
+                    <a href="pages/blog.html" rel="noopener" class="hover:text-accent transition">Blog</a>
                 </li>
                 <li>
                     <a href="cv/max_sviderskyi_cv.pdf" target="_blank" rel="noopener"
@@ -87,36 +80,77 @@
 
         <!-- Projects -->
         <section class="mb-12">
-            <h2 class="text-lg font-medium mb-4">Projects
-                <span class="italic text-muted"></span>
-            </h2>
+            <h2 class="text-lg font-medium mb-2">Projects</h2>
+
+            <p class="text-sm text-muted leading-relaxed mb-6">
+            I like taking on freelance work sometimes that catches my interest in web/software development or data entry
+            with some personal projects to improve my knowledge.   
+            </p>
 
             <ul class="space-y-4 text-muted">
-                <li>
-                    <a href="https://github.com/MaxSvid/antigravity-awesome-skills" class="hover:text-text transition">
-                        <span class="font-medium text-text">Antigravity Skills</span>
-                        -> agentic skills to modified personal agents CLI for assistants.
-                    </a>
+                <li class="relative group/ag">
+                    <a id="antigravityToggle" class="font-medium text-text cursor-pointer hover:text-text transition">Antigravity Skills</a>
+                    <span class="absolute left-full ml-3 top-0 opacity-0 group-hover/ag:opacity-100 transition-opacity duration-200 pointer-events-none text-xs text-muted border border-muted/40 rounded px-2 py-0.5 whitespace-nowrap">personal project</span>
+                    -> agentic skills to modified personal agents CLI for assistants.
+                    <div id="antigravityInfo" class="max-h-0 overflow-hidden opacity-0 transition-all duration-500 mt-2">
+                        <p class="text-sm text-muted leading-relaxed">
+                            High-performance collection of agentic skills tailored for the Claude and Gemini CLI to work more independently.
+                        </p>
+                        <div class="text-center mt-3">
+                            <a href="https://github.com/MaxSvid/antigravity-awesome-skills" target="_blank" rel="noopener"
+                                class="text-sm text-muted underline underline-offset-4 hover:text-text transition">GitHub</a>
+                        </div>
+                    </div>
                 </li>
 
-                <li>
-                    <a href="https://github.com/MaxSvid/Mirror-Bot" class="hover:text-text transition">
-                        <span class="font-medium text-text">Mirror Bot</span>
-                        -> personal Telegram bot for group chat. 
-                        <span class="italic text-muted">(job reports, alerts, AI, etc..)</span>
-                        <span class="italic"></span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="hover:text-text transition">
-                        <span class="font-medium text-text"></span>
-                    </a>
+                <li class="relative group/mc">
+                    <a id="minecraftToggle" class="font-medium text-text cursor-pointer hover:text-text transition">Minecraft Server Manager</a>
+                    <span class="absolute left-full ml-3 top-0 opacity-0 group-hover/mc:opacity-100 transition-opacity duration-200 pointer-events-none text-xs text-muted border border-muted/40 rounded px-2 py-0.5 whitespace-nowrap">freelance work</span>
+                    -> Discord bot specially made for MinamiCraft.
+                    <div id="minecraftInfo" class="max-h-0 overflow-hidden opacity-0 transition-all duration-500 mt-2">
+                        <p class="text-sm text-muted leading-relaxed">
+                            <span class="text-text">Server</span> — developed a fully containerized Minecraft Bedrock server using Docker deployed on a VPS. All services share a bridge network keeping them isolated but connected. Automated backups run on a schedule to keep the world safe.
+                            <br/><br/>
+                            <span class="text-text">Bot & API</span> — built a custom Discord bot paired with a FastAPI backend. They communicate securely over the bridge network, letting the bot trigger server actions and have a ticketing support system on the Discord server with other small features.
+                        </p>
+                        <div class="text-center mt-3">
+                            <a href="https://github.com/MaxSvid/antigravity-awesome-skills" target="_blank" rel="noopener"
+                                class="text-sm text-muted underline underline-offset-4 hover:text-text transition">GitHub</a>
+                        </div>
+                    </div>
                 </li>
             </ul>
+
         </section>
 
         <!-- Footer -->
         <div id="footer"></div>
+        <script>
+            const minecraftToggle = document.getElementById("minecraftToggle");
+            const minecraftInfo = document.getElementById("minecraftInfo");
+            minecraftToggle.addEventListener("click", () => {
+                if (minecraftInfo.classList.contains("opacity-0")) {
+                    minecraftInfo.classList.remove("opacity-0", "max-h-0");
+                    minecraftInfo.classList.add("opacity-100", "max-h-96");
+                } else {
+                    minecraftInfo.classList.remove("opacity-100", "max-h-96");
+                    minecraftInfo.classList.add("opacity-0", "max-h-0");
+                }
+            });
+
+            const antigravityToggle = document.getElementById("antigravityToggle");
+            const antigravityInfo = document.getElementById("antigravityInfo");
+            antigravityToggle.addEventListener("click", () => {
+                if (antigravityInfo.classList.contains("opacity-0")) {
+                    antigravityInfo.classList.remove("opacity-0", "max-h-0");
+                    antigravityInfo.classList.add("opacity-100", "max-h-40");
+                } else {
+                    antigravityInfo.classList.remove("opacity-100", "max-h-40");
+                    antigravityInfo.classList.add("opacity-0", "max-h-0");
+                }
+            });
+
+        </script>
         <script>
             fetch("footer.html")
                 .then(res => res.text())
